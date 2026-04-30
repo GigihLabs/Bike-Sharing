@@ -8,14 +8,14 @@ st.set_page_config(page_title="WeBike Analysis Dashboard", layout="wide")
 
 # memuat dataset yang telah dibersihkan dan menjawab seluruh pertanyaan EDA
 # memuat dataset day.csv yang telah dibersihkan dan dijadikan main_data.csv
-df = pd.read_csv("dashboard/main_data.csv")
+df = pd.read_csv("main_data.csv")
 df['dteday'] = pd.to_datetime(df['dteday'])
 df['mnth_name'] = df['dteday'].dt.month_name()
 
 # membuat sidebar di kiri
 with st.sidebar:
     # memuat gambar logo dan penjelasan singkat tentang aplikasi
-    st.image("dashboard/logo.png")
+    st.image("logo.png")
     st.text("Solusi mobilitas perkotaan berbasis teknologi dalam mengatasi kemacetan dan emisi karbon.")
 
     # membuat filter data
@@ -177,7 +177,7 @@ with tab4: # mengisi tab "korelasi Suhu dan Windspeed" dengan diagram regresi un
     # memuat data per jam menggunakan dataset hour.csv yang sudah dibersihkan
     @st.cache_data
     def load_hourly_data():
-        return pd.read_csv("dashboard/hour_cleaned.csv")
+        return pd.read_csv("hour_cleaned.csv")
 
     hour_df = load_hourly_data()
 
