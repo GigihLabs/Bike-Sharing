@@ -1,21 +1,34 @@
-# Bike Sharing Analysis Dashboard
+# WeBike Analysis Dashboard
 
-Submission ini bertujuan untuk menganalisis dataset Bike Sharing untuk memahami tren penyewaan sepeda, pengaruh cuaca, dan perilaku pengguna.
+Submission untuk Proyek Analisis Data - Dicoding "Belajar Dasar Analisis Data". Dashboard ini memberikan wawasan mendalam mengenai tren penyewaan sepeda berdasarkan data historis, pengaruh cuaca, dan profil perilaku pengguna.
 
-## Daftar Isi
-1. [Setup Environment](#setup-environment)
-2. [Menjalankan Aplikasi](#menjalankan-aplikasi)
-3. [Deployment](#deployment)
+## Ringkasan Proyek
+Proyek ini menganalisis dataset "Bike Sharing" untuk menjawab beberapa pertanyaan kunci:
+1. **Prediksi Kebutuhan Armada:** Bagaimana tren pertumbuhan volume penyewaan bulanan dan prediksi untuk kuartal mendatang?
+2. **Analisis Perilaku (Clustering):** Bagaimana karakteristik pengguna dapat diklasifikasikan ke dalam kategori *Low, Commuter, Leisure,* dan *Hybrid*?
+3. **Pengaruh Cuaca:** Bagaimana faktor eksternal seperti suhu dan kecepatan angin memengaruhi minat penyewaan?
 
-## Setup Environment
-Untuk menjalankan proyek ini di komputer lokal, Anda memerlukan Python. Ikuti langkah berikut:
+## Fitur Dashboard
+- **Filter Rentang Waktu:** Menyesuaikan data berdasarkan tanggal yang dipilih.
+- **Filter Jenis Pengguna:** Memisahkan data antara pengguna kasual dan terdaftar (*registered*).
+- **Analisis Lanjutan:** Fitur manual grouping/clustering untuk profil pengguna.
+- **Visualisasi Interaktif:** Grafik tren dan korelasi yang informatif.
 
-```bash
-# Clone repositori ini
-git clone [URL-REPO-ANDA]
+## Setup Environment (Lokal)
 
-# Masuk ke folder dashboard
-cd dashboard
+Jika Anda ingin menjalankan proyek ini di komputer lokal, ikuti langkah-langkah berikut:
 
-# Install library yang diperlukan
-pip install -r requirements.txt
+1. **Clone Repositori**
+   ```bash
+   git clone [https://github.com/GigihLabs/Bike-Sharing.git](https://github.com/GigihLabs/Bike-Sharing.git)
+   cd Bike-Sharing
+
+2. **Buat Virtual Environment**
+   python -m venv venv
+   source venv/bin/activate
+   
+4. **Install Dependensi**
+   pip install -r requirements.txt
+  
+5. **Jalankan Aplikasi Streamlit**
+   streamlit run dashboard/dashboard.py
