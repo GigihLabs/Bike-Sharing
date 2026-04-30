@@ -15,7 +15,7 @@ df['mnth_name'] = df['dteday'].dt.month_name()
 # membuat sidebar di kiri
 with st.sidebar:
     # memuat gambar logo dan penjelasan singkat tentang aplikasi
-    st.image("dashboardlogo.png")
+    st.image("dashboard/logo.png")
     st.text("Solusi mobilitas perkotaan berbasis teknologi dalam mengatasi kemacetan dan emisi karbon.")
 
     # membuat filter data
